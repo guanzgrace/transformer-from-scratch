@@ -1,0 +1,133 @@
+Config(d_model=768, debug=True, layer_norm_eps=1e-05, d_vocab=50257, init_range=0.02, n_ctx=1024, d_head=64, d_mlp=3072, n_heads=12, n_layers=12)
+Getting top 5 tokens after: The capital of France is Paris. The capital of Germany is
+
+🔹 DemoTransformer Top 5 Predictions:
+  1: ID 11307 | Prob: 26.67% | Word: ' Berlin'
+  2: ID 31970 | Prob: 14.37% | Word: ' Frankfurt'
+  3: ID 46993 | Prob: 10.78% | Word: ' Dresden'
+  4: ID 22418 | Prob: 10.04% | Word: ' Munich'
+  5: ID 32526 | Prob:  6.20% | Word: ' Hamburg'
+
+======================================================================
+Testing: 'The word is Apple. The word is'
+======================================================================
+
+🔹 DemoTransformer Top 5 Predictions:
+  1: ID  4196 | Prob: 23.80% | Word: ' Apple'
+  2: ID  3012 | Prob: 11.19% | Word: ' Google'
+  3: ID   262 | Prob:  6.14% | Word: ' the'
+  4: ID  5413 | Prob:  2.56% | Word: ' Microsoft'
+  5: ID  5565 | Prob:  2.02% | Word: ' Android'
+
+🔹 HuggingFace Transformer Top 5 Predictions:
+  1: ID  4196 | Prob: 23.80% | Word: ' Apple'
+  2: ID  3012 | Prob: 11.19% | Word: ' Google'
+  3: ID   262 | Prob:  6.14% | Word: ' the'
+  4: ID  5413 | Prob:  2.56% | Word: ' Microsoft'
+  5: ID  5565 | Prob:  2.02% | Word: ' Android'
+
+📊 LOGITS COMPARISON:
+  Max diff:  0.000069
+  Mean diff: 0.000015
+  Status: ✅ PASS
+
+======================================================================
+Testing: 'The capital of France is'
+======================================================================
+
+🔹 DemoTransformer Top 5 Predictions:
+  1: ID   262 | Prob:  8.46% | Word: ' the'
+  2: ID   783 | Prob:  4.79% | Word: ' now'
+  3: ID   257 | Prob:  4.62% | Word: ' a'
+  4: ID  4881 | Prob:  3.24% | Word: ' France'
+  5: ID  6342 | Prob:  3.22% | Word: ' Paris'
+
+🔹 HuggingFace Transformer Top 5 Predictions:
+  1: ID   262 | Prob:  8.46% | Word: ' the'
+  2: ID   783 | Prob:  4.79% | Word: ' now'
+  3: ID   257 | Prob:  4.62% | Word: ' a'
+  4: ID  4881 | Prob:  3.24% | Word: ' France'
+  5: ID  6342 | Prob:  3.22% | Word: ' Paris'
+
+📊 LOGITS COMPARISON:
+  Max diff:  0.000107
+  Mean diff: 0.000014
+  Status: ✅ PASS
+
+======================================================================
+Testing: '1, 2, 3, 4,'
+======================================================================
+
+🔹 DemoTransformer Top 5 Predictions:
+  1: ID   642 | Prob: 87.05% | Word: ' 5'
+  2: ID   718 | Prob:  2.65% | Word: ' 6'
+  3: ID   604 | Prob:  2.41% | Word: ' 4'
+  4: ID   290 | Prob:  0.96% | Word: ' and'
+  5: ID   767 | Prob:  0.91% | Word: ' 7'
+
+🔹 HuggingFace Transformer Top 5 Predictions:
+  1: ID   642 | Prob: 87.05% | Word: ' 5'
+  2: ID   718 | Prob:  2.65% | Word: ' 6'
+  3: ID   604 | Prob:  2.41% | Word: ' 4'
+  4: ID   290 | Prob:  0.96% | Word: ' and'
+  5: ID   767 | Prob:  0.91% | Word: ' 7'
+
+📊 LOGITS COMPARISON:
+  Max diff:  0.000031
+  Mean diff: 0.000010
+  Status: ✅ PASS
+
+======================================================================
+Testing: 'Barack Obama was born in'
+======================================================================
+
+🔹 DemoTransformer Top 5 Predictions:
+  1: ID   968 | Prob:  8.34% | Word: ' New'
+  2: ID  4842 | Prob:  5.96% | Word: ' Chicago'
+  3: ID   262 | Prob:  5.54% | Word: ' the'
+  4: ID 13708 | Prob:  3.99% | Word: ' Hawaii'
+  5: ID 21506 | Prob:  3.56% | Word: ' Kenya'
+
+🔹 HuggingFace Transformer Top 5 Predictions:
+  1: ID   968 | Prob:  8.34% | Word: ' New'
+  2: ID  4842 | Prob:  5.96% | Word: ' Chicago'
+  3: ID   262 | Prob:  5.54% | Word: ' the'
+  4: ID 13708 | Prob:  3.99% | Word: ' Hawaii'
+  5: ID 21506 | Prob:  3.56% | Word: ' Kenya'
+
+📊 LOGITS COMPARISON:
+  Max diff:  0.000107
+  Mean diff: 0.000020
+  Status: ✅ PASS
+
+======================================================================
+Testing: 'The likelihood that a deceased donor kidney will be used'
+======================================================================
+
+🔹 DemoTransformer Top 5 Predictions:
+  1: ID   329 | Prob: 31.88% | Word: ' for'
+  2: ID   284 | Prob: 19.75% | Word: ' to'
+  3: ID   287 | Prob: 15.42% | Word: ' in'
+  4: ID   355 | Prob:  8.00% | Word: ' as'
+  5: ID   318 | Prob:  5.26% | Word: ' is'
+
+🔹 HuggingFace Transformer Top 5 Predictions:
+  1: ID   329 | Prob: 31.88% | Word: ' for'
+  2: ID   284 | Prob: 19.75% | Word: ' to'
+  3: ID   287 | Prob: 15.42% | Word: ' in'
+  4: ID   355 | Prob:  8.00% | Word: ' as'
+  5: ID   318 | Prob:  5.26% | Word: ' is'
+
+📊 LOGITS COMPARISON:
+  Max diff:  0.000107
+  Mean diff: 0.000020
+  Status: ✅ PASS
+Getting next 50 tokens after: The likelihood that a deceased donor kidney will be used
+  0%|          | 0/50 [00:00<?, ?it/s]
+The likelihood that a deceased donor kidney will be used for transplantation is very low.
+
+
+The most common cause of death for kidney transplants is kidney failure. The most common cause of death for kidney transplants is kidney failure.
+
+
+The most common cause of death for kidney transplantation
