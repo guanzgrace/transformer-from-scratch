@@ -1,0 +1,172 @@
+Config(d_model=32, debug=False, layer_norm_eps=1e-05, d_vocab=50257, init_range=0.02, n_ctx=128, d_head=8, d_mlp=128, n_heads=4, n_layers=2)
+
+Loading dataset...
+Starting training for 5 epochs
+Total steps per epoch: 250
+Device: mps
+----------------------------------------------------------------------
+Step 50: avg loss = 9.4639
+Step 100: avg loss = 7.0635
+Step 100: accuracy = 0.0937
+Step 150: avg loss = 6.0506
+Step 200: avg loss = 5.5626
+Step 200: accuracy = 0.1496
+Step 250: avg loss = 5.0564
+
+======================================================================
+End of Epoch 1
+======================================================================
+Average Loss: 6.6394
+Accuracy: 0.2106
+
+Generated Sample:
+Once upon a time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+======================================================================
+
+Step 300: avg loss = 4.6296
+Step 350: avg loss = 4.3842
+Step 350: accuracy = 0.2464
+Step 400: avg loss = 4.2051
+Step 450: avg loss = 4.0631
+Step 450: accuracy = 0.2751
+Step 500: avg loss = 3.9676
+
+======================================================================
+End of Epoch 2
+======================================================================
+Average Loss: 4.2499
+Accuracy: 0.2915
+
+Generated Sample:
+Once upon a time, there was a little girl named Lily. She was a big, but he was so happy.
+
+The little girl was so happy to the park. He was so happy. He was so happy. He was so happy. He was so
+
+======================================================================
+
+Step 550: avg loss = 3.8187
+Step 600: avg loss = 3.7435
+Step 600: accuracy = 0.3107
+Step 650: avg loss = 3.6819
+Step 700: avg loss = 3.6330
+Step 700: accuracy = 0.3211
+Step 750: avg loss = 3.5795
+
+======================================================================
+End of Epoch 3
+======================================================================
+Average Loss: 3.6913
+Accuracy: 0.3271
+
+Generated Sample:
+Once upon a time, there was a little girl named Lily. She loved to play with her mom. One day, Lily was a big, but she was very happy. She was very happy and happy.
+
+The little girl was so happy that she was so
+
+======================================================================
+
+Step 800: avg loss = 3.4974
+Step 850: avg loss = 3.4658
+Step 850: accuracy = 0.3357
+Step 900: avg loss = 3.4497
+Step 950: avg loss = 3.4261
+Step 950: accuracy = 0.3430
+Step 1000: avg loss = 3.3806
+
+======================================================================
+End of Epoch 4
+======================================================================
+Average Loss: 3.4439
+Accuracy: 0.3467
+
+Generated Sample:
+Once upon a time, there was a little girl named Lily. She loved to play with her mom. One day, Lily's mommy's mommy, "I'm sorry, Lily, Lily. I'm sorry, you like a big dog. I'm sorry
+
+======================================================================
+
+Step 1050: avg loss = 3.3284
+Step 1100: avg loss = 3.3226
+Step 1100: accuracy = 0.3509
+Step 1150: avg loss = 3.2823
+Step 1200: avg loss = 3.2972
+Step 1200: accuracy = 0.3553
+Step 1250: avg loss = 3.2731
+
+======================================================================
+End of Epoch 5
+======================================================================
+Average Loss: 3.3007
+Accuracy: 0.3581
+
+Generated Sample:
+Once upon a time, there was a little girl named Lily. She loved to play with her friends. One day, Lily's mommy's mommy, "I'm sorry, Lily, Lily. I'm sorry, I'm sorry, "I'm sorry,
+
+======================================================================
+
+Training complete!
+
+Prompt: 'Once upon a time'
+Generated: Once upon a time, there was a little girl named Lily. She loved to play with her friends. One day, Lily's mommy's mommy, "I'm sorry, Lily, Lily. I'm sorry, I'm sorry, "I'm sorry,
+
+
+Prompt: 'The cat sat on the'
+Generated: The cat sat on the park.
+
+"I'm sorry, I'm sorry, but you can't be careful. I have to be careful. I have to be careful. I have to be careful. I have to be careful. I have to be careful.
+
+
+Prompt: 'In a land far away'
+Generated: In a land far away, he was so excited. He was so excited to see what he was. He was so happy to be able to be able to be careful.
+
+The little girl was so happy to be careful and always always always always always always always always
+

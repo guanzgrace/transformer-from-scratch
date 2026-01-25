@@ -1,4 +1,4 @@
-Config(d_model=768, debug=True, layer_norm_eps=1e-05, d_vocab=50257, init_range=0.02, n_ctx=1024, d_head=64, d_mlp=3072, n_heads=12, n_layers=12)
+Config(d_model=768, debug=False, layer_norm_eps=1e-05, d_vocab=50257, init_range=0.02, n_ctx=1024, d_head=64, d_mlp=3072, n_heads=12, n_layers=12)
 Getting top 5 tokens after: The capital of France is Paris. The capital of Germany is
 
 🔹 DemoTransformer Top 5 Predictions:
