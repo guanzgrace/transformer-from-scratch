@@ -1,0 +1,24 @@
+Loading model...
+
+======================================================================
+SAMPLING TESTS
+======================================================================
+Prompt: 'The meaning of life is'
+
+1. Greedy decoding (temperature=0.0)
+   'The meaning of life is not the same as the meaning of death'
+
+2. Temperature sampling (temperature=0.7)
+   'The meaning of life is the universe of knowledge, the world of physics, the universe of lived experience, the world of thought'
+
+3. Top-k sampling (k=50)
+   'The meaning of life is, in most cases, a struggle between human beings and the living world and'
+
+4. Top-p sampling (p=0.9)
+   'The meaning of life is, they say, infinite. And the others reckon it infinite.\n\n10 God and your God'
+
+5. Frequency penalty (penalty=2.0)
+   "The meaning of life is the universe of knowledge, flight and reality physics. That's why lived realities"
+
+======================================================================
+All sampling tests complete!

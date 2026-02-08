@@ -1,13 +1,14 @@
 # GPT-2 From Scratch
 
-A clean implementation of GPT-2 that achieves numerical equivalence with Hugging Face's model.
-
+A from-scratch implementation of GPT-2 in PyTorch, built to deeply understand every component of a decoder-only transformer end-to-end — from attention heads to training loops to sampling strategies.
 
 ## Overview
 
-This project implements GPT-2 from scratch in PyTorch, based on the TransformerLens architecture from the ARENA curriculum. The implementation is decoupled from TransformerLens dependencies (specifically `HookedTransformer`) and uses Hugging Face's tokenizer and pretrained weights for validation (`from transformers import GPT2TokenizerFast, GPT2LMHeadModel`). It includes a complete training pipeline for learning GPT-2 style transformers from scratch on custom datasets.
+This project implements GPT-2 from scratch in PyTorch, based on the TransformerLens architecture from the ARENA curriculum. The implementation is decoupled from TransformerLens dependencies (specifically `HookedTransformer`) and uses Hugging Face's tokenizer and pretrained weights for validation (`from transformers import GPT2TokenizerFast, GPT2LMHeadModel`). It includes a complete training pipeline for learning GPT-2 style transformers from scratch on custom datasets. It also includes a sampling script to showcase different sampling strategies.
 
 I did this as an educational exercise to understand transformer architecture more deeply.
+
+Note: All `.py` files include `# %%` cell markers and can be run interactively as Jupyter notebooks in VS Code.
 
 
 ## Features
@@ -20,7 +21,8 @@ I did this as an educational exercise to understand transformer architecture mor
   - Generate top-k next token predictions
   - Compare outputs between this and HuggingFace models
   - Generate sequences (50+ tokens) from a starting prompt
-  - Train small transformers on TinyStories dataset
+  - (`training.py`) Train small transformers on TinyStories dataset
+  - (`sampling.py`) Sample with greedy, top-k, top-p, temperature, and frequency penalty strategies
 
 
 ## Project Structure
@@ -30,6 +32,8 @@ I did this as an educational exercise to understand transformer architecture mor
 ├── transformer_test.py     # Model validation tests (compare with HuggingFace)
 ├── training.py             # Training pipeline
 ├── training_test.py        # Test a training run on TinyStories dataset
+├── sampling.py             # Sampling strategies (greedy, top-k, top-p, temperature, frequency penalty)
+├── sampling_test.py        # Test sampling
 ├── outputs/                # Training logs and sample outputs
 │   ├── transformer_output.txt
 │   └── training_logs.txt
@@ -60,10 +64,6 @@ From training:
 - For example:
   - At the end of Epoch 2, the generated story is: "Once upon a time, "I'm a big, you. I can't know what you can't know what you are you [truncated]"
   - At the end of Epoch 5, the generated story is: "Once upon a time, there was a little girl named Lily. She loved to play with her friends. One day, she saw a big, there was a little girl named Lily. She loved to play with her friends. One day, she saw a big, there"
-
-
-## TODO
-- [ ] Add `sampling.py` to showcase different methods to sample from a transformer
 
 
 ## Acknowledgments
