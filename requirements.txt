@@ -1,0 +1,7 @@
+torch==2.*
+transformers>=4.30
+datasets==2.*
+numpy==1.*
+tqdm==4.*
+einops==0.8.*
+jaxtyping==0.3.*

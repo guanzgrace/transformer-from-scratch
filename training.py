@@ -34,19 +34,6 @@ from tqdm.auto import tqdm
 from transformer import DemoTransformer, Config, get_log_probs, device
 from transformers import GPT2TokenizerFast
 
-# %% 
-# Create model and config
-model_cfg = Config(
-    debug=False,
-    d_model=32,
-    n_heads=16,
-    d_head=2,
-    d_mlp=32 * 4,
-    n_layers=4,
-    n_ctx=128,
-    d_vocab=50257,
-)
-
 # %%
 @dataclass
 class TransformerTrainingArgs:

@@ -4,11 +4,9 @@ A from-scratch implementation of GPT-2 in PyTorch, built to deeply understand ev
 
 ## Overview
 
-This project implements GPT-2 from scratch in PyTorch, based on the TransformerLens architecture from the ARENA curriculum. The implementation is decoupled from TransformerLens dependencies (specifically `HookedTransformer`) and uses Hugging Face's tokenizer and pretrained weights for validation (`from transformers import GPT2TokenizerFast, GPT2LMHeadModel`). It includes a complete training pipeline for learning GPT-2 style transformers from scratch on custom datasets. It also includes a sampling script to showcase different sampling strategies.
+This project implements GPT-2 from scratch in PyTorch, based on the TransformerLens architecture from the ARENA curriculum. The implementation is decoupled from TransformerLens dependencies (specifically `HookedTransformer`) and uses Hugging Face's tokenizer and pretrained weights for validation (`from transformers import GPT2TokenizerFast, GPT2LMHeadModel`). It includes a complete training pipeline for learning GPT-2 style transformers from scratch on custom datasets, and a sampling module with multiple decoding strategies (greedy, temperature, top-k, top-p, and frequency penalty).
 
 I did this as an educational exercise to understand transformer architecture more deeply.
-
-Note: All `.py` files include `# %%` cell markers and can be run interactively as Jupyter notebooks in VS Code.
 
 
 ## Features
@@ -24,6 +22,23 @@ Note: All `.py` files include `# %%` cell markers and can be run interactively a
   - (`training.py`) Train small transformers on TinyStories dataset
   - (`sampling.py`) Sample with greedy, top-k, top-p, temperature, and frequency penalty strategies
 
+## Quickstart
+```
+pip install -r requirements.txt
+```
+
+```
+# Validate the model against HuggingFace's GPT-2
+python transformer_test.py
+
+# Train a small model on TinyStories
+python training_test.py
+
+# Test sampling strategies with pretrained GPT-2
+python sampling_test.py
+```
+
+**Note:** All `.py` files include `# %%` cell markers and can be run interactively as Jupyter notebooks in VS Code.
 
 ## Project Structure
 ```
@@ -33,10 +48,12 @@ Note: All `.py` files include `# %%` cell markers and can be run interactively a
 ├── training.py             # Training pipeline
 ├── training_test.py        # Test a training run on TinyStories dataset
 ├── sampling.py             # Sampling strategies (greedy, top-k, top-p, temperature, frequency penalty)
-├── sampling_test.py        # Test sampling
+├── sampling_test.py        # Sampling strategy tests with pretrained GPT-2
+├── requirements.txt        # Python dependencies
 ├── outputs/                # Training logs and sample outputs
 │   ├── transformer_output.txt
-│   └── training_logs.txt
+│   ├── training_logs.txt
+│   └── sampling_output.txt
 └── README.md
 ```
 
