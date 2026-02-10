@@ -62,8 +62,7 @@ class TransformerSampler:
         temperature=1.0,
         top_k=0,
         top_p=0.0,
-        frequency_penalty=0.0,
-        seed=None,
+        frequency_penalty=0.0
     ) -> int:
         assert input_ids.ndim == 1, "input_ids should be a 1D sequence of token ids"
         assert temperature >= 0, "Temperature should be non-negative"

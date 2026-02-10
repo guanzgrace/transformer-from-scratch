@@ -16,11 +16,11 @@ I did this as an educational exercise to understand transformer architecture mor
 - **Training from Scratch**: Complete training pipeline for learning GPT-2 style models on custom datasets
 - **Comprehensive Testing**: Includes validation tests comparing against HuggingFace's implementation
 - **Usage Examples**: 
-  - Generate top-k next token predictions
-  - Compare outputs between this and HuggingFace models
-  - Generate sequences (50+ tokens) from a starting prompt
-  - (`training.py`) Train small transformers on TinyStories dataset
-  - (`sampling.py`) Sample with greedy, top-k, top-p, temperature, and frequency penalty strategies
+  - Generate top-k next token predictions (`transformer_test.py`)
+  - Compare outputs between this and HuggingFace models (`transformer_test.py`)
+  - Generate sequences (50+ tokens) from a starting prompt (`transformer_test.py`)
+  - Train small transformers on TinyStories dataset (`training_test.py`)
+  - Sample with greedy, top-k, top-p, temperature, and frequency penalty strategies (`sampling_test.py`)
 
 ## Quickstart
 ```
