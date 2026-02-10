@@ -31,7 +31,7 @@ from torch import Tensor
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 
-from transformer import DemoTransformer, Config, get_log_probs, device
+from transformer import DemoTransformer, get_log_probs, device
 from transformers import GPT2TokenizerFast
 
 # %%
@@ -95,7 +95,6 @@ def tokenize_and_concatenate(
 # %%
 class TransformerTrainer:
     def __init__(self, args: TransformerTrainingArgs, model: DemoTransformer, tokenizer: GPT2TokenizerFast):
-        super().__init__()
         self.model = model
         self.args = args
         self.tokenizer = tokenizer
@@ -115,9 +114,9 @@ class TransformerTrainer:
         tokens = batch["tokens"].to(device)
         logits = self.model(tokens)
         loss = -get_log_probs(logits, tokens).mean()
+        self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()
-        self.optimizer.zero_grad()
         self.step += 1
         self.train_losses.append(loss.item())
         return loss
@@ -178,7 +177,7 @@ class TransformerTrainer:
                     self.eval_accuracies.append(accuracy)  # Track all evaluations
                     print(f"Step {self.step}: accuracy = {accuracy:.4f}")
                 
-                if i >= self.args.max_steps_per_epoch:
+                if i + 1 >= self.args.max_steps_per_epoch:
                     break
 
             # End of epoch evaluation and sample generation

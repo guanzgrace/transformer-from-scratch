@@ -15,14 +15,14 @@ from transformer import DemoTransformer, Config, load_gpt2_weights, device
 from transformers import GPT2TokenizerFast
 from sampling import TransformerSampler
 # %%
-# Disable gradients for inference
-t.set_grad_enabled(False)
-# %%
 ########################################################################################################
 # Test sampling implementation
 ########################################################################################################
 
 if __name__ == "__main__":
+    # Disable gradients for inference
+    t.set_grad_enabled(False)
+
     print("Loading model...")
     cfg = Config(debug=False)
     model = DemoTransformer(cfg).to(device)

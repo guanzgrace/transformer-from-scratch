@@ -11,7 +11,7 @@ This test suite:
 """
 # %%
 import torch as t
-from tqdm.notebook import tqdm
+from tqdm.auto import tqdm
 
 from transformers import GPT2TokenizerFast, GPT2LMHeadModel
 from transformer import DemoTransformer, Config, load_gpt2_weights, device

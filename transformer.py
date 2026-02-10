@@ -147,7 +147,7 @@ class Attention(nn.Module):
         # create upper triangular matrix of 1's where we want to set these to -inf
         # don't include the diagonal since words can see themselves
         attn_size = attn_scores.shape[-1]
-        mask = t.triu(t.ones((attn_size, attn_size)), diagonal=1).to(device)
+        mask = t.triu(t.ones((attn_size, attn_size)), diagonal=1).to(attn_scores.device)
 
         # setting them to -inf means the softmax will turn them to 0
         # this ensures that each word can only see the past and itself, not the future
@@ -309,7 +309,7 @@ def load_gpt2_weights(cfg: Config, local_model: DemoTransformer):
     local_state["ln_final.b"] = hf_state["transformer.ln_f.bias"]
     local_state["unembed.W_U"] = hf_state["transformer.wte.weight"].T
     # Ensure bias is zeroed as HF GPT-2 doesn't use it
-    local_state["unembed.b_U"] = t.zeros(local_model.cfg.d_vocab, device=device)
+    local_state["unembed.b_U"] = t.zeros(local_model.cfg.d_vocab)
 
     local_model.load_state_dict(local_state)
     return local_model
